@@ -18,5 +18,13 @@
 所以将输入copy高低位拼接  -1 取反 与操作后 高低位或  将-1右边的数放到左边实现轮询仲裁  
 ![image](https://github.com/15936866194/AxiCrossbar_Study/assets/143673576/5cd39e2b-2ee9-4157-99d9-7ee197d56c03)  
 
+StreamArbiter实现功能（以3位输入为例）    
+复位后：默认响应100  下一时刻优先级为210
+将轮询仲裁完全以组合逻辑呈现：输入valid2 valid1 valid0有效后，按优先级210直接选择output_valid  
+并实现payload传输，output_valid有效锁存仲裁结果，等待output_ready后释放，并按轮询仲裁逻辑重新仲裁
+
+
+
+
 
 
