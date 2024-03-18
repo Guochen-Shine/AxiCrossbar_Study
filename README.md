@@ -21,7 +21,11 @@
 StreamArbiter实现功能（以3位输入为例）    
 复位后：默认响应100  下一时刻优先级为210
 将轮询仲裁完全以组合逻辑呈现：输入valid2 valid1 valid0有效后，按优先级210直接选择output_valid  
-并实现payload传输，output_valid有效锁存仲裁结果，等待output_ready后释放，并按轮询仲裁逻辑重新仲裁
+并实现payload传输，output_valid有效锁存仲裁结果，等待output_ready后释放，并按轮询仲裁逻辑重新仲裁  
+使用vcs+verdi仿真
+![image](https://github.com/15936866194/AxiCrossbar_Study/assets/143673576/3bcf936c-7df0-4e45-b98d-6559a48b6058)
+
+
 
 
 
